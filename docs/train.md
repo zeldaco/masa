@@ -47,3 +47,6 @@ Here is a multiple GPU training using Grounding-Dino as example:
 tools/dist_train.sh configs/masa-gdino/masa_gdino_swinb_train.py 8 --work-dir saved_models/masa_gdino/
 ```
 
+Training with other models is similar. You can find the configuration files in the ```configs/masa-gdino/``` folder. You can also modify the configuration files for other models. If you want to train the SAM-based models, we provide the converted SAM ViT-B: sam_vit_b_01ec64_mmdet.pth and ViT-H: sam_vit_h_4b8939_mmdet.pth
+ weights [here](https://huggingface.co/dereksiyuanli/masa/tree/main). You can download them and put them in the ```saved_models/pretrain_weights/``` folder. Then, you can modify the configuration files to use these weights.
+
