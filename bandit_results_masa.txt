@@ -1,0 +1,1922 @@
+Run started:2025-04-16 20:20:49.198573
+
+Test results:
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\demo\video_demo_with_text.py:90:4
+89	    args = parse_args()
+90	    assert args.out, \
+91	        ('Please specify at least one operation (save the '
+92	         'video) with the argument "--out" ')
+93	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\apis\masa_inference.py:162:12
+161	        for m in model.modules():
+162	            assert not isinstance(
+163	                m, RoIPool
+164	            ), "CPU inference with RoIPool is not supported currently."
+165	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\bdd_masa_dataset.py:53:12
+52	        if isinstance(idx, tuple):
+53	            assert len(idx) == 2, "The length of idx must be 2: "
+54	            "(video_index, frame_index)"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\dataset_wrappers.py:48:8
+47	    ) -> None:
+48	        assert isinstance(pipeline, collections.abc.Sequence)
+49	        if skip_type_keys is not None:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\dataset_wrappers.py:50:12
+49	        if skip_type_keys is not None:
+50	            assert all(
+51	                [isinstance(skip_type_key, str) for skip_type_key in skip_type_keys]
+52	            )
+53	        self._skip_type_keys = skip_type_keys
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\dataset_wrappers.py:92:12
+91	            self.test_mode = dataset.test_mode
+92	            assert not self.test_mode, "'ConcatDataset' should not exist in "
+93	            "test mode"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\dataset_wrappers.py:271:8
+270	        """
+271	        assert all([isinstance(skip_type_key, str) for skip_type_key in skip_type_keys])
+272	        self._skip_type_keys = skip_type_keys
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\dataset_wrappers.py:297:8
+296	        self.video_sample_ratio = video_sample_ratio
+297	        assert isinstance(self.dataset, RandomSampleJointVideoConcatDataset)
+298	
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b311-random
+   Location: .\masa\datasets\dataset_wrappers.py:334:15
+333	        while True:
+334	            if random.random() < self.video_sample_ratio:
+335	                sample_video = True
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\evaluation\bdd_teta_metric.py:146:12
+145	        if self.format_only:
+146	            assert outfile_prefix is not None, "outfile_prefix must be not"
+147	            "None when format_only is True, otherwise the result files will"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\evaluation\bdd_teta_metric.py:171:8
+170	        # get the class list according to the dataset type
+171	        assert dataset_type in ["BDDVideoDataset"]
+172	        if dataset_type == "BDDVideoDataset":
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\evaluation\bdd_teta_metric.py:208:8
+207	        # load predictions
+208	        assert "pred_track_instances" in img_data_sample
+209	        pred_instances = img_data_sample["pred_track_instances"]
+
+--------------------------------------------------
+>> Issue: [B403:blacklist] Consider possible security implications associated with pickle module.
+   Severity: Low   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_imports.html#b403-import-pickle
+   Location: .\masa\datasets\evaluation\tao_teta_metric.py:3:0
+2	import os.path as osp
+3	import pickle
+4	import shutil
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\evaluation\tao_teta_metric.py:121:12
+120	        if self.format_only:
+121	            assert outfile_prefix is not None, "outfile_prefix must be not"
+122	            "None when format_only is True, otherwise the result files will"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\evaluation\tao_teta_metric.py:145:8
+144	        # get the class list according to the dataset type
+145	        assert dataset_type in ["Taov05Dataset", "Taov1Dataset"]
+146	        if dataset_type == "Taov05Dataset":
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\evaluation\tao_teta_metric.py:185:8
+184	        # load predictions
+185	        assert "pred_track_instances" in img_data_sample
+186	        pred_instances = img_data_sample["pred_track_instances"]
+
+--------------------------------------------------
+>> Issue: [B301:blacklist] Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b301-pickle
+   Location: .\masa\datasets\evaluation\tao_teta_metric.py:254:23
+253	            )
+254	            eval_res = pickle.load(open(eval_results_path, "rb"))
+255	
+
+--------------------------------------------------
+>> Issue: [B403:blacklist] Consider possible security implications associated with pickle module.
+   Severity: Low   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_imports.html#b403-import-pickle
+   Location: .\masa\datasets\masa_dataset.py:5:0
+4	import os.path as osp
+5	import pickle
+6	from typing import List, Union
+
+--------------------------------------------------
+>> Issue: [B301:blacklist] Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b301-pickle
+   Location: .\masa\datasets\masa_dataset.py:42:24
+41	        # Deserialize the binary data and load the list of dictionaries
+42	        list_of_dicts = pickle.loads(binary_data)
+43	        return list_of_dicts
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\masa_dataset.py:160:12
+159	        if self.ANN_ID_UNIQUE:
+160	            assert len(set(total_ann_ids)) == len(
+161	                total_ann_ids
+162	            ), f"Annotation ids in '{self.ann_file}' are not unique!"
+163	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\pipelines\formatting.py:59:16
+58	            else:
+59	                assert isinstance(meta_keys, tuple), "meta_keys must be str or tuple"
+60	            self.meta_keys += meta_keys
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\pipelines\formatting.py:97:8
+96	
+97	        assert "img_id" in results, "'img_id' must contained in the results "
+98	        "for counting the number of images"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\pipelines\framesample.py:36:12
+35	        if isinstance(frame_range, int):
+36	            assert frame_range >= 0, "frame_range can not be a negative value."
+37	            frame_range = [-frame_range, frame_range]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\pipelines\framesample.py:39:12
+38	        elif isinstance(frame_range, list):
+39	            assert len(frame_range) == 2, "The length must be 2."
+40	            assert frame_range[0] <= 0 and frame_range[1] >= 0
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\pipelines\framesample.py:40:12
+39	            assert len(frame_range) == 2, "The length must be 2."
+40	            assert frame_range[0] <= 0 and frame_range[1] >= 0
+41	            for i in frame_range:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\pipelines\framesample.py:42:16
+41	            for i in frame_range:
+42	                assert isinstance(i, int), "Each element must be int."
+43	        else:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\pipelines\framesample.py:66:12
+65	                valid_ids.remove(key_frame_id)
+66	            assert (
+67	                len(valid_ids) > 0
+68	            ), "After filtering key frame, there are no valid frames"
+69	            if len(valid_ids) < self.num_ref_imgs:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\pipelines\framesample.py:110:16
+109	                key_frame_id = video_infos["key_frame_id"]
+110	                assert isinstance(video_infos["key_frame_id"], int)
+111	            else:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\pipelines\transforms.py:199:8
+198	    ) -> None:
+199	        assert isinstance(img_scale, tuple)
+200	        assert 0 <= prob <= 1.0, (
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\pipelines\transforms.py:200:8
+199	        assert isinstance(img_scale, tuple)
+200	        assert 0 <= prob <= 1.0, (
+201	            "The probability should be in range [0,1]. " f"got {prob}."
+202	        )
+203	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\pipelines\transforms.py:238:8
+237	
+238	        assert "mosaic_mix_results" in results
+239	        mosaic_bboxes = []
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\pipelines\transforms.py:346:8
+345	        """
+346	        assert loc in ("top_left", "top_right", "bottom_left", "bottom_right")
+347	        if loc == "top_left":
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\pipelines\transforms.py:490:8
+489	    ) -> None:
+490	        assert isinstance(img_scale, tuple)
+491	        log_img_scale(img_scale, skip_square=True, shape_order="wh")
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\pipelines\transforms.py:529:8
+528	
+529	        assert "mixup_mix_results" in results
+530	        assert (
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\pipelines\transforms.py:530:8
+529	        assert "mixup_mix_results" in results
+530	        assert (
+531	            len(results["mixup_mix_results"]) == 1
+532	        ), "MixUp only support 2 images now !"
+533	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\pipelines\transforms.py:655:8
+654	
+655	        assert len(results["gt_bboxes"]) == len(results["gt_instances_ids"])
+656	        return results
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\pipelines\transforms.py:709:8
+708	        # TODO: add more filter options
+709	        assert by_box or by_mask
+710	        self.min_gt_bbox_wh = min_gt_bbox_wh
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\pipelines\transforms.py:726:8
+725	        """
+726	        assert "gt_bboxes" in results
+727	        gt_bboxes = results["gt_bboxes"]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\pipelines\transforms.py:740:12
+739	        if self.by_mask:
+740	            assert "gt_masks" in results
+741	            gt_masks = results["gt_masks"]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\pipelines\transforms.py:859:8
+858	
+859	        assert "copypaste_mix_results" in results
+860	        num_images = len(results["copypaste_mix_results"])
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\pipelines\transforms.py:861:8
+860	        num_images = len(results["copypaste_mix_results"])
+861	        assert (
+862	            num_images == 1
+863	        ), f"CopyPaste only supports processing 2 images, got {num_images}"
+864	        if self.selected:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\pipelines\transforms.py:954:8
+953	        updated_dst_bboxes = updated_dst_masks.get_bboxes(type(dst_bboxes))
+954	        assert len(updated_dst_bboxes) == len(updated_dst_masks)
+955	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\pipelines\transforms.py:988:8
+987	        """Update masks with composed mask."""
+988	        assert (
+989	            masks.masks.shape[-2:] == composed_mask.shape[-2:]
+990	        ), "Cannot compare two arrays of different size"
+991	        masks.masks = np.where(composed_mask, 0, masks.masks)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\pipelines\transforms.py:1056:8
+1055	    ) -> None:
+1056	        assert 0 <= max_translate_ratio <= 1
+1057	        assert scaling_ratio_range[0] <= scaling_ratio_range[1]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\pipelines\transforms.py:1057:8
+1056	        assert 0 <= max_translate_ratio <= 1
+1057	        assert scaling_ratio_range[0] <= scaling_ratio_range[1]
+1058	        assert scaling_ratio_range[0] > 0
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\pipelines\transforms.py:1058:8
+1057	        assert scaling_ratio_range[0] <= scaling_ratio_range[1]
+1058	        assert scaling_ratio_range[0] > 0
+1059	        self.max_rotate_degree = max_rotate_degree
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\pipelines\transforms.py:1124:12
+1123	            results["gt_instances_ids"] = results["gt_instances_ids"][valid_index]
+1124	            assert len(results["gt_bboxes"]) == len(results["gt_instances_ids"])
+1125	            if "gt_masks" in results:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\pipelines\wrappers.py:37:4
+36	def imdenormalize(img, mean, std, to_bgr=True):
+37	    assert img.dtype != np.uint8
+38	    mean = mean.reshape(1, -1).astype(np.float64)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\pipelines\wrappers.py:108:12
+107	        for key in keys:
+108	            assert isinstance(data[key], Sequence)
+109	            if seq_len:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\pipelines\wrappers.py:120:8
+119	
+120	        assert seq_len > 0, "Fail to get the number of broadcasting targets"
+121	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\rsconcat_dataset.py:23:8
+22	        super(RandomSampleConcatDataset, self).__init__(datasets)
+23	        assert len(sampling_probs) == len(
+24	            datasets
+25	        ), "Number of sampling probabilities must match the number of datasets"
+26	        assert sum(sampling_probs) == 1.0, "Sum of sampling probabilities must be 1.0"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\rsconcat_dataset.py:26:8
+25	        ), "Number of sampling probabilities must match the number of datasets"
+26	        assert sum(sampling_probs) == 1.0, "Sum of sampling probabilities must be 1.0"
+27	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\rsconcat_dataset.py:44:8
+43	        total_datasets_length = sum([len(dataset) for dataset in self.datasets])
+44	        assert (
+45	            self.fixed_length <= total_datasets_length
+46	        ), "the length of the concatenated dataset must be less than the sum of the lengths of the individual datasets"
+47	        self.flag = np.zeros(self.fixed_length, dtype=np.uint8)
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b311-random
+   Location: .\masa\datasets\rsconcat_dataset.py:78:29
+77	        # Choose a dataset based on the sampling probabilities
+78	        chosen_dataset_idx = random.choices(
+79	            range(len(self.datasets)), weights=self.sampling_probs, k=1
+80	        )[0]
+81	        chosen_dataset = self.datasets[chosen_dataset_idx]
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b311-random
+   Location: .\masa\datasets\rsconcat_dataset.py:84:21
+83	        # Sample a random item from the chosen dataset
+84	        sample_idx = random.randrange(0, len(chosen_dataset))
+85	        return chosen_dataset[sample_idx]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\rsconcat_dataset.py:150:8
+149	        )
+150	        assert (
+151	            self.fixed_length <= total_datasets_length
+152	        ), "the length of the concatenated dataset must be less than the sum of the lengths of the individual datasets"
+153	        self.flag = np.zeros(self.fixed_length, dtype=np.uint8)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\rsconcat_dataset.py:162:12
+161	        if self.video_sampling_probs:
+162	            assert (
+163	                sum(self.video_sampling_probs) == 1.0
+164	            ), "Sum of video sampling probabilities must be 1.0"
+165	        if self.img_sampling_probs:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\rsconcat_dataset.py:166:12
+165	        if self.img_sampling_probs:
+166	            assert (
+167	                sum(self.img_sampling_probs) == 1.0
+168	            ), "Sum of image sampling probabilities must be 1.0"
+169	
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b311-random
+   Location: .\masa\datasets\rsconcat_dataset.py:197:33
+196	        if idx == 0:
+197	            chosen_dataset_idx = random.choices(
+198	                self.video_dataset_idx, weights=self.video_sampling_probs, k=1
+199	            )[0]
+200	        elif idx == 1:
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b311-random
+   Location: .\masa\datasets\rsconcat_dataset.py:201:33
+200	        elif idx == 1:
+201	            chosen_dataset_idx = random.choices(
+202	                self.img_dataset_idx, weights=self.img_sampling_probs, k=1
+203	            )[0]
+204	
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b311-random
+   Location: .\masa\datasets\rsconcat_dataset.py:207:21
+206	        # Sample a random item from the chosen dataset
+207	        sample_idx = random.choice(self.datasets_indices_mapping[chosen_dataset_idx])
+208	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\samplers\distributed_video_sampler.py:9:8
+8	        self.shuffle = shuffle
+9	        assert not self.shuffle, "Specific for video sequential testing."
+10	        self.num_samples = len(dataset)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\samplers\hybrid_video_img_sampler.py:56:12
+55	            cat_datasets = self.dataset.datasets
+56	            assert isinstance(
+57	                cat_datasets[0], BaseVideoDataset
+58	            ), f"expected BaseVideoDataset, but got {type(cat_datasets[0])}"
+59	            self.test_mode = cat_datasets[0].test_mode
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\samplers\hybrid_video_img_sampler.py:60:12
+59	            self.test_mode = cat_datasets[0].test_mode
+60	            assert not self.test_mode, "'ConcatDataset' should not exist in "
+61	            "test mode"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\samplers\hybrid_video_img_sampler.py:73:12
+72	            ori_dataset = self.dataset.dataset
+73	            assert isinstance(
+74	                ori_dataset, BaseVideoDataset
+75	            ), f"expected BaseVideoDataset, but got {type(ori_dataset)}"
+76	            self.test_mode = ori_dataset.test_mode
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\samplers\hybrid_video_img_sampler.py:77:12
+76	            self.test_mode = ori_dataset.test_mode
+77	            assert not self.test_mode, "'ClassBalancedDataset' should not "
+78	            "exist in test mode"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\samplers\hybrid_video_img_sampler.py:123:12
+122	        else:
+123	            assert isinstance(self.dataset, SeqMultiImageMixDataset), (
+124	                "HybridVideoImgSampler is only supported in BaseVideoDataset or "
+125	                "dataset wrapper: ClassBalancedDataset and ConcatDataset,SeqMultiImageMixDataset, but "
+126	                f"got {type(self.dataset)} "
+127	            )
+128	            self.test_mode = self.dataset.test_mode
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\samplers\hybrid_video_img_sampler.py:134:16
+133	            else:
+134	                assert isinstance(
+135	                    self.dataset.dataset, _ConcatDataset
+136	                ), "HybridVideoImgSampler is only supported in _ConcatDataset"
+137	                cat_datasets = self.dataset.dataset.datasets
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\samplers\hybrid_video_img_sampler.py:140:20
+139	                    self.test_mode = dataset.test_mode
+140	                    assert not self.test_mode, "'ConcatDataset' should not exist in "
+141	                    "test mode"
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   CWE: CWE-330 (https://cwe.mitre.org/data/definitions/330.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b311-random
+   Location: .\masa\datasets\samplers\hybrid_video_img_sampler.py:195:18
+194	            # deterministically shuffle based on epoch
+195	            rng = random.Random(self.epoch + self.seed)
+196	            indices = rng.sample(self.indices, len(self.indices))
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\samplers\hybrid_video_img_sampler.py:200:12
+199	            indices += indices[: (self.total_size - len(indices))]
+200	            assert len(indices) == self.total_size
+201	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\samplers\hybrid_video_img_sampler.py:204:12
+203	            indices = indices[self.rank : self.total_size : self.world_size]
+204	            assert len(indices) == self.num_samples
+205	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\datasets\tao_masa_dataset.py:43:12
+42	        if isinstance(idx, tuple):
+43	            assert len(idx) == 2, "The length of idx must be 2: "
+44	            "(video_index, frame_index)"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\models\detectors\detic_masa.py:190:8
+189	
+190	        assert self.with_bbox, "Bbox head must be implemented."
+191	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\models\detectors\gdino_masa.py:35:4
+34	        counter += len(i)
+35	    assert counter == len(lst)
+36	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\models\detectors\gdino_masa.py:79:16
+78	            for init_cfg in init_cfgs:
+79	                assert isinstance(init_cfg, dict)
+80	                if (
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\models\detectors\gdino_masa.py:179:16
+178	                # chunked text prompts, only bs=1 is supported
+179	                assert len(batch_inputs) == 1
+180	                count = 0
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\models\detectors\grounding_dino.py:161:4
+160	        counter += len(i)
+161	    assert counter == len(lst)
+162	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\models\detectors\grounding_dino.py:192:8
+191	        num_feats = self.positional_encoding.num_feats
+192	        assert num_feats * 2 == self.embed_dims, (
+193	            f"embed_dims should be exactly 2 times of num_feats. "
+194	            f"Found {self.embed_dims} and {num_feats}."
+195	        )
+196	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\models\detectors\grounding_dino.py:373:12
+372	        if not self.training and chunked_size > 0:
+373	            assert (
+374	                isinstance(original_caption, (list, tuple)) or custom_entities is True
+375	            )
+376	            all_output = self.get_tokens_positive_and_prompts_chunked(
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\models\detectors\grounding_dino.py:724:12
+723	            # chunked text prompts, only bs=1 is supported
+724	            assert len(batch_inputs) == 1
+725	            count = 0
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\models\losses\unbiased_contrastive_loss.py:65:8
+64	    ):
+65	        assert cls_score.size() == label.size()
+66	        assert reduction_override in (None, "none", "mean", "sum")
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\models\losses\unbiased_contrastive_loss.py:66:8
+65	        assert cls_score.size() == label.size()
+66	        assert reduction_override in (None, "none", "mean", "sum")
+67	        reduction = reduction_override if reduction_override else self.reduction
+
+--------------------------------------------------
+>> Issue: [B403:blacklist] Consider possible security implications associated with pickle module.
+   Severity: Low   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_imports.html#b403-import-pickle
+   Location: .\masa\models\mot\masa.py:8:0
+7	import os
+8	import pickle
+9	import warnings
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\models\mot\masa.py:86:12
+85	        if use_masa_backbone:
+86	            assert (
+87	                backbone is not None
+88	            ), "backbone must be set when using MASA backbone."
+89	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\models\mot\masa.py:141:12
+140	        if self.freeze_detector:
+141	            assert (
+142	                detector is not None
+143	            ), "detector must be set when freeze_detector is True."
+144	            self.freeze_module("detector")
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\models\mot\masa.py:148:12
+147	        if self.freeze_masa_adapter:
+148	            assert (
+149	                masa_adapter is not None
+150	            ), "masa_adapter must be set when freeze_masa_adapter is True."
+151	            self.freeze_module("masa_adapter")
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\models\mot\masa.py:156:12
+155	        if self.freeze_object_prior_distillation:
+156	            assert (
+157	                roi_head is not None
+158	            ), "roi_head must be set when freeze_object_prior_distillation is True."
+159	            assert (
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\models\mot\masa.py:159:12
+158	            ), "roi_head must be set when freeze_object_prior_distillation is True."
+159	            assert (
+160	                rpn_head is not None
+161	            ), "rpn_head must be set when freeze_object_prior_distillation is True."
+162	            self.freeze_module("roi_head")
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\models\mot\masa.py:166:12
+165	        if self.freeze_masa_backbone:
+166	            assert (
+167	                backbone is not None
+168	            ), "backbone must be set when freeze_masa_backbone is True."
+169	            self.freeze_module("backbone")
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\models\mot\masa.py:173:12
+172	        if load_public_dets:
+173	            assert (
+174	                public_det_path is not None
+175	            ), "load_public_dets and public_det_path must be set together."
+176	            self.benchmark = benchmark
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\models\mot\masa.py:218:8
+217	        """
+218	        assert inputs.dim() == 5, "The img must be 5D Tensor (N, T, C, H, W)."
+219	        assert (
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\models\mot\masa.py:219:8
+218	        assert inputs.dim() == 5, "The img must be 5D Tensor (N, T, C, H, W)."
+219	        assert (
+220	            inputs.size(0) == 1
+221	        ), "MASA inference only support 1 batch size per gpu for now."
+222	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\models\mot\masa.py:223:8
+222	
+223	        assert len(data_samples) == 1, "MASA only support 1 batch size per gpu for now."
+224	
+
+--------------------------------------------------
+>> Issue: [B301:blacklist] Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b301-pickle
+   Location: .\masa\models\mot\masa.py:246:29
+245	                path = os.path.join(self.public_det_path, pickle_name)
+246	                pickle_res = pickle.load(open(path, "rb"))
+247	                det_labels = torch.tensor(pickle_res["det_labels"]).to("cuda")
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\models\mot\masa.py:284:16
+283	            elif self.given_dets:
+284	                assert (
+285	                    "det_bboxes" in img_data_sample
+286	                ), "det_bboxes must be given when given_dets is True."
+287	                assert (
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\models\mot\masa.py:287:16
+286	                ), "det_bboxes must be given when given_dets is True."
+287	                assert (
+288	                    "det_labels" in img_data_sample
+289	                ), "det_labels must be given when given_dets is True."
+290	                det_labels = img_data_sample.det_labels
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\models\mot\masa.py:408:8
+407	        # modify the inputs shape to fit mmdet
+408	        assert inputs.dim() == 5, "The img must be 5D Tensor (N, T, C, H, W)."
+409	        assert (
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\models\mot\masa.py:409:8
+408	        assert inputs.dim() == 5, "The img must be 5D Tensor (N, T, C, H, W)."
+409	        assert (
+410	            inputs.size(1) == 2
+411	        ), "MASA can only have 1 key frame and 1 reference frame."
+412	        if self.detector is not None:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\models\necks\deform_fusion.py:165:8
+164	    ):
+165	        assert init_cfg is None, (
+166	            "To prevent abnormal initialization "
+167	            "behavior, init_cfg is not allowed to be set"
+168	        )
+169	        super().__init__(init_cfg=init_cfg)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\models\necks\deform_fusion.py:190:8
+189	        """Forward function."""
+190	        assert isinstance(inputs, (tuple, list))
+191	        outs = self.dyhead_blocks(inputs)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\models\necks\simplefpn.py:89:8
+88	        super(SimpleFPN, self).__init__(init_cfg)
+89	        assert isinstance(in_channels, list)
+90	        self.in_channels = in_channels
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\models\necks\simplefpn.py:102:12
+101	            self.backbone_end_level = self.num_ins
+102	            assert num_outs >= self.num_ins - start_level
+103	        else:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\models\necks\simplefpn.py:106:12
+105	            self.backbone_end_level = end_level
+106	            assert end_level <= len(in_channels)
+107	            assert num_outs == end_level - start_level
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\models\necks\simplefpn.py:107:12
+106	            assert end_level <= len(in_channels)
+107	            assert num_outs == end_level - start_level
+108	        self.start_level = start_level
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\models\necks\simplefpn.py:111:8
+110	        self.add_extra_convs = add_extra_convs
+111	        assert isinstance(add_extra_convs, (str, bool))
+112	        if isinstance(add_extra_convs, str):
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\models\necks\simplefpn.py:114:12
+113	            # Extra_convs_source choices: 'on_input', 'on_lateral', 'on_output'
+114	            assert add_extra_convs in ("on_input", "on_lateral", "on_output")
+115	        elif add_extra_convs:  # True
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\models\necks\simplefpn.py:192:12
+191	        if isinstance(inputs, list):
+192	            assert len(inputs) == len(ops)
+193	            for i in range(len(ops)):
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\models\necks\simplefpn.py:199:8
+198	
+199	        assert len(features) == len(self.in_channels)
+200	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\models\roi_heads\track_heads\masa_track_head.py:103:8
+102	        """
+103	        assert self.with_track
+104	        num_imgs = len(data_samples)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\models\sam\amg.py:18:12
+17	        for v in kwargs.values():
+18	            assert isinstance(
+19	                v, (list, np.ndarray, torch.Tensor)
+20	            ), "MaskData only supports list, numpy arrays, and torch tensors."
+21	        self._stats = dict(**kwargs)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\models\sam\amg.py:24:8
+23	    def __setitem__(self, key: str, item: Any) -> None:
+24	        assert isinstance(
+25	            item, (list, np.ndarray, torch.Tensor)
+26	        ), "MaskData only supports list, numpy arrays, and torch tensors."
+27	        self._stats[key] = item
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\models\sam\amg.py:93:4
+92	def batch_iterator(batch_size: int, *args) -> Generator[List[Any], None, None]:
+93	    assert len(args) > 0 and all(
+94	        len(a) == len(args[0]) for a in args
+95	    ), "Batched iteration must have inputs of all the same size."
+96	    n_batches = len(args[0]) // batch_size + int(len(args[0]) % batch_size != 0)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\models\sam\amg.py:270:4
+269	
+270	    assert mode in ["holes", "islands"]
+271	    correct_holes = mode == "holes"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\models\sam\automatic_mask_generator.py:92:8
+91	
+92	        assert (points_per_side is None) != (
+93	            point_grids is None
+94	        ), "Exactly one of points_per_side or point_grid must be provided."
+95	        if points_per_side is not None:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\models\sam\automatic_mask_generator.py:104:8
+103	
+104	        assert output_mode in [
+105	            "binary_mask",
+106	            "uncompressed_rle",
+107	            "coco_rle",
+108	        ], f"Unknown output_mode {output_mode}."
+109	        if output_mode == "coco_rle":
+
+--------------------------------------------------
+>> Issue: [B614:pytorch_load] Use of unsafe PyTorch load
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b614_pytorch_load.html
+   Location: .\masa\models\sam\build_sam.py:103:25
+102	        with open(checkpoint, "rb") as f:
+103	            state_dict = torch.load(f)
+104	        sam.load_state_dict(state_dict)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\models\sam\image_encoder.py:234:12
+233	        if self.use_rel_pos:
+234	            assert (
+235	                input_size is not None
+236	            ), "Input size must be provided if using relative positional encoding."
+237	            # initialize relative positional embeddings
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\models\sam\predictor.py:40:8
+39	        """
+40	        assert image_format in [
+41	            "RGB",
+42	            "BGR",
+43	        ], f"image_format must be in ['RGB', 'BGR'], is {image_format}."
+44	        if image_format != self.model.image_format:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\models\sam\predictor.py:71:8
+70	        """
+71	        assert (
+72	            len(transformed_image.shape) == 4
+73	            and transformed_image.shape[1] == 3
+74	            and max(*transformed_image.shape[2:]) == self.model.image_encoder.img_size
+75	        ), f"set_torch_image input must be BCHW with long side {self.model.image_encoder.img_size}."
+76	        self.reset_image()
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\models\sam\predictor.py:158:12
+157	        if point_coords is not None:
+158	            assert (
+159	                point_labels is not None
+160	            ), "point_labels must be supplied if point_coords is supplied."
+161	            point_coords = self.transform.apply_coords(point_coords, self.original_size)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\models\sam\predictor.py:282:8
+281	            )
+282	        assert (
+283	            self.features is not None
+284	        ), "Features must exist if an image has been set."
+285	        return self.features
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\models\sam\transformer.py:192:8
+191	        self.num_heads = num_heads
+192	        assert (
+193	            self.internal_dim % num_heads == 0
+194	        ), "num_heads must divide embedding_dim."
+195	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\models\tracker\masa_bdd_tracker.py:61:8
+60	        super().__init__(**kwargs)
+61	        assert 0 <= memo_momentum <= 1.0
+62	        assert memo_tracklet_frames >= 0
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\models\tracker\masa_bdd_tracker.py:62:8
+61	        assert 0 <= memo_momentum <= 1.0
+62	        assert memo_tracklet_frames >= 0
+63	        assert memo_backdrop_frames >= 0
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\models\tracker\masa_bdd_tracker.py:63:8
+62	        assert memo_tracklet_frames >= 0
+63	        assert memo_backdrop_frames >= 0
+64	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\models\tracker\masa_bdd_tracker.py:75:8
+74	        self.with_cats = with_cats
+75	        assert match_metric in ["bisoftmax", "softmax", "cosine"]
+76	        self.match_metric = match_metric
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\models\tracker\masa_tao_tracker.py:58:8
+57	        super().__init__(**kwargs)
+58	        assert 0 <= memo_momentum <= 1.0
+59	        assert memo_tracklet_frames >= 0
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\models\tracker\masa_tao_tracker.py:59:8
+58	        assert 0 <= memo_momentum <= 1.0
+59	        assert memo_tracklet_frames >= 0
+60	        self.init_score_thr = init_score_thr
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\visualization\visualizer.py:213:12
+212	        if draw_gt and data_sample is not None:
+213	            assert "gt_instances" in data_sample
+214	            gt_img_data = self._draw_instances(image, data_sample.gt_instances)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\masa\visualization\visualizer.py:217:12
+216	        if draw_pred and data_sample is not None:
+217	            assert "pred_track_instances" in data_sample
+218	            pred_instances = data_sample.pred_track_instances
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\projects\CO-DETR\codetr\co_atss_head.py:47:8
+46	        featmap_sizes = [featmap.size()[-2:] for featmap in cls_scores]
+47	        assert len(featmap_sizes) == self.prior_generator.num_levels
+48	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\projects\CO-DETR\codetr\co_atss_head.py:105:8
+104	        num_imgs = len(batch_img_metas)
+105	        assert len(anchor_list) == len(valid_flag_list) == num_imgs
+106	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\projects\CO-DETR\codetr\co_atss_head.py:113:12
+112	        for i in range(num_imgs):
+113	            assert len(anchor_list[i]) == len(valid_flag_list[i])
+114	            anchor_list[i] = torch.cat(anchor_list[i])
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\projects\CO-DETR\codetr\co_dino_head.py:49:12
+48	        if 'two_stage_num_proposals' in transformer:
+49	            assert transformer['two_stage_num_proposals'] == num_query, \
+50	                'two_stage_num_proposals must be equal to num_query for DINO'
+51	        else:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\projects\CO-DETR\codetr\co_dino_head.py:69:8
+68	        self.embed_dims = self.transformer.embed_dims
+69	        assert hasattr(self.positional_encoding, 'num_feats')
+70	        num_feats = self.positional_encoding.num_feats
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\projects\CO-DETR\codetr\co_dino_head.py:71:8
+70	        num_feats = self.positional_encoding.num_feats
+71	        assert num_feats * 2 == self.embed_dims, 'embed_dims should' \
+72	            f' be exactly 2 times of num_feats. Found {self.embed_dims}' \
+73	            f' and {num_feats}.'
+74	        """Initialize classification branch and regression branch of head."""
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\projects\CO-DETR\codetr\co_dino_head.py:175:16
+174	            else:
+175	                assert reference.shape[-1] == 2
+176	                tmp[..., :2] += reference
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\projects\CO-DETR\codetr\co_dino_head.py:252:8
+251	        """
+252	        assert len(cls_score) == len(bbox_pred)  # num_queries
+253	        max_per_img = self.test_cfg.get('max_per_img', self.num_query)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\projects\CO-DETR\codetr\co_dino_head.py:283:12
+282	        if rescale:
+283	            assert img_meta.get('scale_factor') is not None
+284	            det_bboxes /= det_bboxes.new_tensor(
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\projects\CO-DETR\codetr\co_dino_head.py:303:8
+302	    def loss(self, x, batch_data_samples):
+303	        assert self.dn_generator is not None, '"dn_cfg" must be set'
+304	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\projects\CO-DETR\codetr\co_dino_head.py:393:16
+392	            else:
+393	                assert reference.shape[-1] == 2
+394	                tmp[..., :2] += reference
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\projects\CO-DETR\codetr\co_roi_head.py:22:8
+21	
+22	        assert len(rpn_results_list) == len(batch_data_samples)
+23	        outputs = unpack_gt_instances(batch_data_samples)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\projects\CO-DETR\codetr\codetr.py:41:8
+40	
+41	        assert eval_module in ['detr', 'one-stage', 'two-stage']
+42	        self.eval_module = eval_module
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\projects\CO-DETR\codetr\codetr.py:196:12
+195	        else:
+196	            assert batch_data_samples[0].get('proposals', None) is not None
+197	            # use pre-defined proposals in InstanceData for the second stage
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\projects\CO-DETR\codetr\codetr.py:262:8
+261	        """
+262	        assert self.eval_module in ['detr', 'one-stage', 'two-stage']
+263	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\projects\CO-DETR\codetr\codetr.py:296:8
+295	                         rescale: bool = True) -> InstanceList:
+296	        assert self.with_bbox, 'Bbox head must be implemented.'
+297	        if self.with_query_head:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\projects\CO-DETR\codetr\codetr.py:312:8
+311	                          rescale: bool = True) -> InstanceList:
+312	        assert self.with_bbox, 'Bbox head must be implemented.'
+313	        if self.with_query_head:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\projects\CO-DETR\codetr\transformer.py:164:16
+163	            else:
+164	                assert reference_points.shape[-1] == 2
+165	                reference_points_input = reference_points[:, :, None] * \
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\projects\CO-DETR\codetr\transformer.py:181:20
+180	                else:
+181	                    assert reference_points.shape[-1] == 2
+182	                    new_reference_points = tmp
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\projects\CO-DETR\codetr\transformer.py:436:8
+435	        """
+436	        assert self.as_two_stage or query_embed is not None
+437	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\projects\CO-DETR\codetr\transformer.py:607:16
+606	            else:
+607	                assert reference_points.shape[-1] == 2
+608	                reference_points_input = reference_points[:, :, None] * \
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\projects\CO-DETR\codetr\transformer.py:624:20
+623	                else:
+624	                    assert reference_points.shape[-1] == 2
+625	                    new_reference_points = tmp
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\projects\CO-DETR\codetr\transformer.py:763:8
+762	        """
+763	        assert self.as_two_stage or query_embed is not None
+764	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\projects\CO-DETR\codetr\transformer.py:959:4
+958	def build_MLP(input_dim, hidden_dim, output_dim, num_layers):
+959	    assert num_layers > 1, \
+960	        f'num_layers should be greater than 1 but got {num_layers}'
+961	    h = [hidden_dim] * (num_layers - 1)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\projects\CO-DETR\codetr\transformer.py:1037:16
+1036	            else:
+1037	                assert reference_points.shape[-1] == 2
+1038	                reference_points_input = \
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\projects\CO-DETR\codetr\transformer.py:1056:16
+1055	                tmp = reg_branches[lid](output)
+1056	                assert reference_points.shape[-1] == 4
+1057	                new_reference_points = tmp + inverse_sigmoid(
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\projects\CO-DETR\codetr\transformer.py:1124:8
+1123	                **kwargs):
+1124	        assert self.as_two_stage and query_embed is None, \
+1125	            'as_two_stage must be True for DINO'
+1126	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\projects\CO-DETR\codetr\transformer.py:1318:12
+1317	        else:
+1318	            assert not self.pre_norm, f'Use prenorm in ' \
+1319	                                      f'{self.__class__.__name__},' \
+1320	                                      f'Please specify post_norm_cfg'
+1321	            self.post_norm = None
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\projects\CO-DETR\codetr\transformer.py:1374:8
+1373	            **kwargs)
+1374	        assert len(operation_order) == 6
+1375	        assert set(operation_order) == set(
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\projects\CO-DETR\codetr\transformer.py:1375:8
+1374	        assert len(operation_order) == 6
+1375	        assert set(operation_order) == set(
+1376	            ['self_attn', 'norm', 'cross_attn', 'ffn'])
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\projects\Detic_new\detic\centernet_rpn_head.py:180:8
+179	        num_imgs = cls_scores[0].size(0)
+180	        assert len(cls_scores) == len(bbox_preds)
+181	        featmap_sizes = [featmap.size()[-2:] for featmap in cls_scores]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\projects\Detic_new\detic\centernet_rpn_head.py:203:8
+202	
+203	        assert (torch.isfinite(flatten_bbox_preds).all().item())
+204	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\projects\Detic_new\detic\centernet_rpn_head.py:362:12
+361	
+362	            assert cls_score.size()[-2:] == bbox_pred.size()[-2:]
+363	
+
+--------------------------------------------------
+>> Issue: [B403:blacklist] Consider possible security implications associated with pickle module.
+   Severity: Low   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_imports.html#b403-import-pickle
+   Location: .\projects\Detic_new\detic\detic.py:19:0
+18	import torch
+19	import pickle
+20	import pycocotools.mask as mask_util
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\projects\Detic_new\detic\detic.py:223:12
+222	        else:
+223	            assert batch_data_samples[0].get('proposals', None) is not None
+224	            # use pre-defined proposals in InstanceData for the second stage
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\projects\Detic_new\detic\detic.py:275:8
+274	
+275	        assert self.with_bbox, 'Bbox head must be implemented.'
+276	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\projects\Detic_new\detic\detic_bbox_head.py:59:8
+58	        # reconstruct fc_cls and fc_reg since input channels are changed
+59	        assert self.with_cls
+60	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\projects\Detic_new\detic\detic_bbox_head.py:139:12
+138	        if rescale and bboxes.size(0) > 0:
+139	            assert img_meta.get('scale_factor') is not None
+140	            scale_factor = [1 / s for s in img_meta['scale_factor']]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\projects\Detic_new\detic\detic_bbox_head.py:391:8
+390	        img_ids = rois[:, 0].long().unique(sorted=True)
+391	        assert img_ids.numel() <= len(batch_img_metas)
+392	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\projects\Detic_new\detic\detic_bbox_head.py:429:8
+428	        reg_dim = self.bbox_coder.encode_size
+429	        assert bbox_pred.size()[1] == reg_dim
+430	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\projects\Detic_new\detic\detic_roi_head.py:260:8
+259	        """
+260	        assert len(rpn_results_list) == len(batch_data_samples)
+261	        outputs = unpack_gt_instances(batch_data_samples)
+
+--------------------------------------------------
+>> Issue: [B403:blacklist] Consider possible security implications associated with pickle module.
+   Severity: Low   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_imports.html#b403-import-pickle
+   Location: .\projects\Detic_new\detic\imagenet_lvis.py:4:0
+3	import os.path as osp
+4	import pickle
+5	import warnings
+
+--------------------------------------------------
+>> Issue: [B301:blacklist] Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b301-pickle
+   Location: .\projects\Detic_new\detic\imagenet_lvis.py:281:24
+280	                self.data_bytes[start_addr:end_addr])  # type: ignore
+281	            data_info = pickle.loads(bytes)  # type: ignore
+282	        else:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\projects\Detic_new\detic\imagenet_lvis.py:330:12
+329	        if self.ANN_ID_UNIQUE:
+330	            assert len(set(total_ann_ids)) == len(
+331	                total_ann_ids
+332	            ), f"Annotation ids in '{self.ann_file}' are not unique!"
+333	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\projects\Detic_new\detic\iou_loss.py:94:4
+93	
+94	    assert (x2 >= x1).all(), 'bad box: x1 larger than x2'
+95	    assert (y2 >= y1).all(), 'bad box: y1 larger than y2'
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\projects\Detic_new\detic\iou_loss.py:95:4
+94	    assert (x2 >= x1).all(), 'bad box: x1 larger than x2'
+95	    assert (y2 >= y1).all(), 'bad box: y1 larger than y2'
+96	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\projects\Detic_new\detic\zero_shot_classifier.py:53:8
+52	
+53	        assert self.zs_weight.shape[1] == num_classes + 1, self.zs_weight.shape
+54	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\tools\test.py:146:8
+145	    if args.out is not None:
+146	        assert args.out.endswith(('.pkl', '.pickle')), \
+147	            'The dump file must be a pkl file.'
+148	        runner.test_evaluator.metrics.append(
+
+--------------------------------------------------
+
+Code scanned:
+	Total lines of code: 64904
+	Total lines skipped (#nosec): 0
+	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0
+		Low: 174
+		Medium: 5
+		High: 0
+	Total issues (by confidence):
+		Undefined: 0
+		Low: 0
+		Medium: 0
+		High: 179
+Files skipped (0):

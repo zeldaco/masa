@@ -1,0 +1,27 @@
+Traceback (most recent call last):
+  File "C:\Python312\Lib\shutil.py", line 633, in _rmtree_unsafe
+    os.unlink(fullname)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zac17\\AppData\\Local\\Temp\\tmpjkeu_zq6\\.git\\objects\\pack\\pack-5a42a3c17b3c972ea2a9e2d95dd1aa08b1f35bcc.idx'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\zac17\AppData\Roaming\Python\Python312\Scripts\trufflehog.exe\__main__.py", line 7, in <module>
+  File "C:\Users\zac17\AppData\Roaming\Python\Python312\site-packages\truffleHog\truffleHog.py", line 92, in main
+    output = find_strings(args.git_url, args.since_commit, args.max_depth, args.output_json, args.do_regex, do_entropy,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zac17\AppData\Roaming\Python\Python312\site-packages\truffleHog\truffleHog.py", line 381, in find_strings
+    shutil.rmtree(project_path, onerror=del_rw)
+  File "C:\Python312\Lib\shutil.py", line 781, in rmtree
+    return _rmtree_unsafe(path, onexc)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\shutil.py", line 635, in _rmtree_unsafe
+    onexc(os.unlink, fullname, err)
+  File "C:\Python312\Lib\shutil.py", line 750, in onexc
+    return onerror(func, path, exc_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zac17\AppData\Roaming\Python\Python312\site-packages\truffleHog\truffleHog.py", line 125, in del_rw
+    os.remove(name)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\zac17\\AppData\\Local\\Temp\\tmpjkeu_zq6\\.git\\objects\\pack\\pack-5a42a3c17b3c972ea2a9e2d95dd1aa08b1f35bcc.idx'
